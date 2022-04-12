@@ -1,0 +1,28 @@
+{
+  "title": "Time Report",
+  "type": "object",
+  "properties": {
+    "momentCreated": {
+      "type": "string"
+    },
+
+    "project": {
+      "type": "object"
+    },
+    "reportDate": {
+      "type": "string"
+    }
+  },
+
+  "task": {
+    "$ref": "Task",
+    "title": "Reported Task"
+  },
+
+  "taskMessage": {
+    "type": "string"
+  },
+  "timeReported": {
+    "type": "integer"
+  }
+}

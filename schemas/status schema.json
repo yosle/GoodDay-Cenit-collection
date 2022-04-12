@@ -1,0 +1,21 @@
+{
+  "title": "Status",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "color": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "systemStatus": {
+      "type": "integer"
+    }
+  }
+}

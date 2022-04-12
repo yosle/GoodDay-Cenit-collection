@@ -1,0 +1,385 @@
+{
+  "info": {
+    "_postman_id": "003b910b-17b3-4786-b8c6-be187eabc753",
+    "name": "GoodDay API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "CREATE",
+      "item": [
+        {
+          "name": "New Folder",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"createdByUserId\": \"USER-ID\",\r\n        \"name\": \"New Folder name\",\r\n        \"parentProjectId\": \"PROJECT-ID\"\r\n        }"
+            },
+            "url": {
+              "raw": "https://api.goodday.work/2.0/projects/new-folder",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "projects", "new-folder"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Project",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://api.goodday.work/2.0//projects/new-project",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "", "projects", "new-project"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"title\": \"New Task Title\",\r\n        \"projectId\": \"PROJECT-ID\",\r\n        \"fromUserId\": \"USER1-ID\",\r\n        \"toUserId\": \"USER2-ID\",\r\n        \"estimate\": 120,\r\n        \"startDate\": \"2019-09-25\",\r\n        \"endDate\": \"2019-09-27\"\r\n        }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://api.goodday.work/2.0/task",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "task"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Get Projects",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0/projects",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "projects"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Action required task",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0//user/{{User ID}}/action-required-tasks",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "", "user", "{{User ID}}", "action-required-tasks"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get task",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.goodday.work/2.0/project/bYia4p/tasks",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "project", "bYia4p", "tasks"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.14.0"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 Apr 2022 23:53:36 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"ngpcnO\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 1\",\n        \"shortId\": \"1\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-11\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7p40iy\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 2\",\n        \"shortId\": \"2\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"drD5lZ\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 3\",\n        \"shortId\": \"3\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-16\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"KxYEBx\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 4\",\n        \"shortId\": \"4\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 3,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"vaOtBD\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"1OERrX\",\n            \"name\": \"Review\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 5\",\n        \"shortId\": \"5\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"skLeP8\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 6\",\n        \"shortId\": \"6\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"CJsVQz\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 7\",\n        \"shortId\": \"7\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7J58eP\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 8\",\n        \"shortId\": \"8\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get task",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0/project/bYia4p/tasks",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "project", "bYia4p", "tasks"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get task",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.goodday.work/2.0/project/bYia4p/tasks",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "project", "bYia4p", "tasks"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.14.0"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 Apr 2022 23:53:36 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"ngpcnO\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 1\",\n        \"shortId\": \"1\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-11\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7p40iy\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 2\",\n        \"shortId\": \"2\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"drD5lZ\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 3\",\n        \"shortId\": \"3\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-16\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"KxYEBx\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 4\",\n        \"shortId\": \"4\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 3,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"vaOtBD\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"1OERrX\",\n            \"name\": \"Review\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 5\",\n        \"shortId\": \"5\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"skLeP8\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 6\",\n        \"shortId\": \"6\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"CJsVQz\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 7\",\n        \"shortId\": \"7\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7J58eP\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 8\",\n        \"shortId\": \"8\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get task by Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0//project/{{Project ID}}/tasks",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "", "project", "{{Project ID}}", "tasks"]
+        }
+      },
+      "response": [
+        {
+          "name": "Get task",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.goodday.work/2.0/project/bYia4p/tasks",
+              "protocol": "https",
+              "host": ["api", "goodday", "work"],
+              "path": ["2.0", "project", "bYia4p", "tasks"]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.14.0"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 04 Apr 2022 23:53:36 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"ngpcnO\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 1\",\n        \"shortId\": \"1\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-11\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7p40iy\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 2\",\n        \"shortId\": \"2\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 1,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"drD5lZ\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"fRjsww\",\n            \"name\": \"Not started\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 3\",\n        \"shortId\": \"3\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": \"2022-04-16\",\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"KxYEBx\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 4\",\n        \"shortId\": \"4\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 3,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"vaOtBD\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"1OERrX\",\n            \"name\": \"Review\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 5\",\n        \"shortId\": \"5\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"skLeP8\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 6\",\n        \"shortId\": \"6\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"CJsVQz\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 7\",\n        \"shortId\": \"7\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    },\n    {\n        \"startDate\": null,\n        \"endDate\": null,\n        \"deadline\": null,\n        \"taskType\": {\n            \"id\": \"O334SC\",\n            \"name\": \"Task\"\n        },\n        \"momentClosed\": null,\n        \"systemStatus\": 2,\n        \"assignedToUserId\": null,\n        \"scheduleStatus\": 0,\n        \"projectId\": \"bYia4p\",\n        \"id\": \"7J58eP\",\n        \"priority\": 5,\n        \"progress\": null,\n        \"reportedTime\": null,\n        \"parentTaskId\": null,\n        \"status\": {\n            \"id\": \"Omo7VJ\",\n            \"name\": \"In progress\"\n        },\n        \"momentCreated\": \"2022-04-04T20:04:08.067464\",\n        \"users\": [\n            \"E0bnzj\"\n        ],\n        \"scheduleDate\": null,\n        \"systemType\": 1,\n        \"createdByUserId\": \"E0bnzj\",\n        \"customFieldsData\": {},\n        \"estimate\": null,\n        \"actionRequiredUserId\": null,\n        \"name\": \"Task 8\",\n        \"shortId\": \"8\",\n        \"recentActivityMoment\": \"2022-04-04T20:04:08.067464\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get All Users",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0/users",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0/user/{USER-ID}",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "user", "{USER-ID}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get User assigned Task",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0/user/{USER-ID}",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "user", "{USER-ID}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Users by Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.goodday.work/2.0//project/{{Project ID}}/users",
+          "protocol": "https",
+          "host": ["api", "goodday", "work"],
+          "path": ["2.0", "", "project", "{{Project ID}}", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Project",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": null
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "xxxxxxxxxxmytokenherexxxxxxxxx",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "gd-api-token",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "Project ID",
+      "value": "{project_id}"
+    },
+    {
+      "key": "User ID",
+      "value": "USER-ID"
+    },
+    {
+      "key": "Task ID",
+      "value": "TaskID"
+    }
+  ]
+}

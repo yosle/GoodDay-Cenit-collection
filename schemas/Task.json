@@ -1,0 +1,100 @@
+{
+  "title": "GoodDayTask",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "shortId": {
+      "type": "string"
+    },
+    "actionRequiredUserId": {
+      "type": "integer"
+    },
+    "createdByUserId": {
+      "type": "string"
+    },
+    "momentCreated": "string"
+  },
+  "deadline": {
+    "type": "string"
+  },
+  "endDate": {
+    "type": "string"
+  },
+  "estimate": {
+    "type": "string"
+  },
+  "momentClosed": {
+    "type": "string"
+  },
+  "momentCreated": {
+    "type": "string"
+  },
+  "name": {
+    "type": "string"
+  },
+  "parentTaskId": {
+    "type": "integer"
+  },
+  "priority": {
+    "type": "integer"
+  },
+  "progress": {
+    "type": "integer"
+  },
+  "projectId": {
+    "type": "string"
+  },
+  "recentActivityMoment": {
+    "type": "string"
+  },
+  "reportedTime": {
+    "type": "string"
+  },
+  "scheduleDate": {
+    "type": "string"
+  },
+  "scheduleStatus": {
+    "type": "integer"
+  },
+  "startDate": {
+    "type": "string"
+  },
+  "status": {
+    "title": "status",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "systemStatus": {
+        "type": "integer"
+      },
+      "systemType": {
+        "type": "integer"
+      }
+    }
+  },
+  "taskType": {
+    "title": "taskType",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      }
+    }
+  },
+  "users": {
+    "type": "array",
+    "items": {
+      "type": "string"
+    },
+    "uniqueItems": false
+  }
+}

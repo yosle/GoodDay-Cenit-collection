@@ -1,0 +1,39 @@
+{
+  "title": "Task type",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "settings": {
+      "type": "object",
+      "title": "Task type settings",
+      "properties": {
+        "actionRequired": {
+          "type": "string"
+        },
+
+        "isGeneric": {
+          "type": "boolean"
+        },
+        "requiredFields": {
+          "type": "array",
+          "items": {
+            "requiredField": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "sortPosition": {
+      "type": "integer"
+    }
+  }
+}

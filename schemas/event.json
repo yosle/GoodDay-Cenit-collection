@@ -1,0 +1,36 @@
+{
+  "title": "Event",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "assignedToUserId": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "momentCreated": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "string"
+    }
+  }
+}
