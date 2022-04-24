@@ -42,4 +42,4 @@ get_task.rb file contain a algorithm example to retrieve all the task of a given
 
 ## License
 
-GoodDay Collection is licensed under [MIT](https://github.com/PHPOffice/PhpSpreadsheet/blob/master/LICENSE).
+GoodDay Collection is licensed under [MIT](https://github.com/yosle/GoodDay-Cenit-collection/blob/main/LICENSE).
