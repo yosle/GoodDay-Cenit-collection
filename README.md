@@ -19,7 +19,7 @@ Note: This will import all the data types and resources in the 'GoodDay' Namespa
 - Create task
 - More...
 
-[![Check the GoodDay API Documentation for a full List)](https://www.goodday.work/developers/api-v2)
+[Check the GoodDay API Documentation for a full List](https://www.goodday.work/developers/api-v2)
 
 ## Avaiable data types
 
